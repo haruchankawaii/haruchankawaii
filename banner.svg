@@ -1,0 +1,221 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Scanline -->
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#ffffff" opacity="0.035"/>
+    </pattern>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect width="1200" height="560" fill="#050505"/>
+
+  <!-- MOVING GRID -->
+  <g opacity="0.13">
+    <path d="
+      M0 60H1200 M0 120H1200 M0 180H1200
+      M0 240H1200 M0 300H1200 M0 360H1200
+      M0 420H1200 M0 480H1200
+    " stroke="#ffffff" stroke-width="1"/>
+
+    <path d="
+      M100 0V560 M200 0V560 M300 0V560
+      M400 0V560 M500 0V560 M600 0V560
+      M700 0V560 M800 0V560 M900 0V560
+      M1000 0V560 M1100 0V560
+    " stroke="#ffffff" stroke-width="1"/>
+
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="0 0;0 60;0 0"
+      dur="6s"
+      repeatCount="indefinite"/>
+  </g>
+
+
+  <!-- RED GLITCH COPY -->
+  <g
+    font-family="monospace"
+    font-size="24"
+    font-weight="900"
+    fill="#ff1744"
+    opacity="0.35">
+
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="
+        -4 0;
+        5 0;
+        -2 0;
+        7 0;
+        0 0;
+        0 0;
+        0 0
+      "
+      dur="0.8s"
+      repeatCount="indefinite"/>
+
+    <text x="92" y="90" xml:space="preserve">
+      <tspan x="92" dy="0">██╗  ██╗ █████╗ ██████╗ ██╗   ██╗      ██████╗██╗  ██╗ █████╗ ███╗   ██╗</tspan>
+      <tspan x="92" dy="30">██║  ██║██╔══██╗██╔══██╗██║   ██║     ██╔════╝██║  ██║██╔══██╗████╗  ██║</tspan>
+      <tspan x="92" dy="30">███████║███████║██████╔╝██║   ██║     ██║     ███████║███████║██╔██╗ ██║</tspan>
+      <tspan x="92" dy="30">██╔══██║██╔══██║██╔══██╗██║   ██║     ██║     ██╔══██║██╔══██║██║╚██╗██║</tspan>
+      <tspan x="92" dy="30">██║  ██║██║  ██║██║  ██║╚██████╔╝     ╚██████╗██║  ██║██║  ██║██║ ╚████║</tspan>
+      <tspan x="92" dy="30">╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝       ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝</tspan>
+    </text>
+  </g>
+
+
+  <!-- MAIN HARU -->
+  <g
+    font-family="monospace"
+    font-size="24"
+    font-weight="900"
+    fill="#eeeeee"
+    filter="url(#glow)">
+
+    <text x="92" y="90" xml:space="preserve">
+      <tspan x="92" dy="0">██╗  ██╗ █████╗ ██████╗ ██╗   ██╗      ██████╗██╗  ██╗ █████╗ ███╗   ██╗</tspan>
+      <tspan x="92" dy="30">██║  ██║██╔══██╗██╔══██╗██║   ██║     ██╔════╝██║  ██║██╔══██╗████╗  ██║</tspan>
+      <tspan x="92" dy="30">███████║███████║██████╔╝██║   ██║     ██║     ███████║███████║██╔██╗ ██║</tspan>
+      <tspan x="92" dy="30">██╔══██║██╔══██║██╔══██╗██║   ██║     ██║     ██╔══██║██╔══██║██║╚██╗██║</tspan>
+      <tspan x="92" dy="30">██║  ██║██║  ██║██║  ██║╚██████╔╝     ╚██████╗██║  ██║██║  ██║██║ ╚████║</tspan>
+      <tspan x="92" dy="30">╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝       ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝</tspan>
+    </text>
+
+    <animate
+      attributeName="opacity"
+      values="1;1;0.6;1;1;0.85;1"
+      dur="3s"
+      repeatCount="indefinite"/>
+  </g>
+
+
+  <!-- SEPARATOR -->
+  <g opacity="0.8">
+    <line
+      x1="160"
+      y1="305"
+      x2="1040"
+      y2="305"
+      stroke="#ffffff"
+      stroke-width="1"/>
+
+    <rect x="570" y="300" width="60" height="10" fill="#ffffff">
+      <animate
+        attributeName="width"
+        values="20;80;20"
+        dur="2s"
+        repeatCount="indefinite"/>
+      <animate
+        attributeName="x"
+        values="590;560;590"
+        dur="2s"
+        repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+
+  <!-- KAWAII GLITCH -->
+  <g
+    font-family="monospace"
+    font-size="28"
+    font-weight="900"
+    fill="#00e5ff"
+    opacity="0.25">
+
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="
+        4 0;
+        -6 0;
+        2 0;
+        0 0;
+        0 0;
+        0 0
+      "
+      dur="1s"
+      repeatCount="indefinite"/>
+
+    <text x="265" y="370" xml:space="preserve">
+      <tspan x="265" dy="0">██╗  ██╗ █████╗ ██╗    ██╗ █████╗ ██╗██╗</tspan>
+      <tspan x="265" dy="32">██║ ██╔╝██╔══██╗██║    ██║██╔══██╗██║██║</tspan>
+      <tspan x="265" dy="32">█████╔╝ ███████║██║ █╗ ██║███████║██║██║</tspan>
+      <tspan x="265" dy="32">██╔═██╗ ██╔══██║██║███╗██║██╔══██║██║██║</tspan>
+      <tspan x="265" dy="32">██║  ██╗██║  ██║╚███╔███╔╝██║  ██║██║██║</tspan>
+      <tspan x="265" dy="32">╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝╚═╝</tspan>
+    </text>
+  </g>
+
+
+  <!-- MAIN KAWAII -->
+  <g
+    font-family="monospace"
+    font-size="28"
+    font-weight="900"
+    fill="#ffffff"
+    filter="url(#glow)">
+
+    <text x="265" y="370" xml:space="preserve">
+      <tspan x="265" dy="0">██╗  ██╗ █████╗ ██╗    ██╗ █████╗ ██╗██╗</tspan>
+      <tspan x="265" dy="32">██║ ██╔╝██╔══██╗██║    ██║██╔══██╗██║██║</tspan>
+      <tspan x="265" dy="32">█████╔╝ ███████║██║ █╗ ██║███████║██║██║</tspan>
+      <tspan x="265" dy="32">██╔═██╗ ██╔══██║██║███╗██║██╔══██║██║██║</tspan>
+      <tspan x="265" dy="32">██║  ██╗██║  ██║╚███╔███╔╝██║  ██║██║██║</tspan>
+      <tspan x="265" dy="32">╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝╚═╝</tspan>
+    </text>
+  </g>
+
+
+  <!-- MOVING SCANLINE -->
+  <rect
+    x="0"
+    y="-40"
+    width="1200"
+    height="45"
+    fill="#ffffff"
+    opacity="0.035">
+
+    <animate
+      attributeName="y"
+      values="-40;600"
+      dur="3.5s"
+      repeatCount="indefinite"/>
+  </rect>
+
+
+  <!-- CRT SCANLINES -->
+  <rect
+    width="1200"
+    height="560"
+    fill="url(#scanlines)"
+    pointer-events="none"/>
+
+
+  <!-- BORDER -->
+  <rect
+    x="12"
+    y="12"
+    width="1176"
+    height="536"
+    rx="4"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="1"
+    opacity="0.2"/>
+
+</svg>
